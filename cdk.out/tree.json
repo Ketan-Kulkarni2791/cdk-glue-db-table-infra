@@ -1,0 +1,980 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.138.1"
+        }
+      },
+      "cdk-glue-db-table-infra": {
+        "id": "cdk-glue-db-table-infra",
+        "path": "cdk-glue-db-table-infra",
+        "children": {
+          "cdk-glue-db-table-infra-keyId": {
+            "id": "cdk-glue-db-table-infra-keyId",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-keyId",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-keyId/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::KMS::Key",
+                  "aws:cdk:cloudformation:props": {
+                    "keyPolicy": {
+                      "Statement": [
+                        {
+                          "Action": [
+                            "kms:Create*",
+                            "kms:Describe*",
+                            "kms:Enable*",
+                            "kms:List*",
+                            "kms:Put*",
+                            "kms:Update*",
+                            "kms:Revoke*",
+                            "kms:Disable*",
+                            "kms:Get*",
+                            "kms:Delete*",
+                            "kms:ScheduleKeyDeletion",
+                            "kms:CancelKeyDeletion",
+                            "kms:GenerateDataKey",
+                            "kms:Decrypt",
+                            "kms:Encrypt",
+                            "kms:ReEncrypt*",
+                            "kms:GenerateDataKey*"
+                          ],
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "s3.amazonaws.com",
+                            "AWS": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "arn:",
+                                  {
+                                    "Ref": "AWS::Partition"
+                                  },
+                                  ":iam::926405661193:root"
+                                ]
+                              ]
+                            }
+                          },
+                          "Resource": "*"
+                        },
+                        {
+                          "Action": [
+                            "kms:Create*",
+                            "kms:Describe*",
+                            "kms:Enable*",
+                            "kms:List*",
+                            "kms:Put*",
+                            "kms:Update*",
+                            "kms:Revoke*",
+                            "kms:Disable*",
+                            "kms:Get*",
+                            "kms:Delete*",
+                            "kms:ScheduleKeyDeletion",
+                            "kms:CancelKeyDeletion",
+                            "kms:GenerateDataKey",
+                            "kms:TagResource",
+                            "kms:UntagResource"
+                          ],
+                          "Effect": "Allow",
+                          "Principal": {
+                            "AWS": {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "arn:",
+                                  {
+                                    "Ref": "AWS::Partition"
+                                  },
+                                  ":iam::926405661193:root"
+                                ]
+                              ]
+                            }
+                          },
+                          "Resource": "*"
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "enabled": true
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-kms.CfnKey",
+                  "version": "1.138.1"
+                }
+              },
+              "Alias": {
+                "id": "Alias",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-keyId/Alias",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-keyId/Alias/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::KMS::Alias",
+                      "aws:cdk:cloudformation:props": {
+                        "aliasName": "alias/cdk-glue-db-table-infra-kms",
+                        "targetKeyId": {
+                          "Fn::GetAtt": [
+                            "cdkgluedbtableinfrakeyId2662481F",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-kms.CfnAlias",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-kms.Alias",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-kms.Key",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infra-sns-topic-id": {
+            "id": "cdk-glue-db-table-infra-sns-topic-id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-sns-topic-id",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-sns-topic-id/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                  "aws:cdk:cloudformation:props": {
+                    "displayName": "glueInfra Reservoir Topic",
+                    "topicName": "cdk-glue-db-table-infra-sns-topic"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-sns.CfnTopic",
+                  "version": "1.138.1"
+                }
+              },
+              "ketankulkarni2791@gmail.com": {
+                "id": "ketankulkarni2791@gmail.com",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-sns-topic-id/ketankulkarni2791@gmail.com",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-sns-topic-id/ketankulkarni2791@gmail.com/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
+                      "aws:cdk:cloudformation:props": {
+                        "protocol": "email",
+                        "topicArn": {
+                          "Ref": "cdkgluedbtableinfrasnstopicidA83204EF"
+                        },
+                        "endpoint": "ketankulkarni2791@gmail.com"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-sns.CfnSubscription",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-sns.Subscription",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-sns.Topic",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infra-act_update_table-policy-id": {
+            "id": "cdk-glue-db-table-infra-act_update_table-policy-id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table-policy-id",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table-policy-id/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::ManagedPolicy",
+                  "aws:cdk:cloudformation:props": {
+                    "policyDocument": {
+                      "Statement": [
+                        {
+                          "Action": [
+                            "cloudwatch:PutMetricData",
+                            "logs:CreateLogGroup",
+                            "logs:CreateLogStream",
+                            "logs:GetQueryResults",
+                            "logs:PutLogEvents",
+                            "logs:StartQuery"
+                          ],
+                          "Effect": "Allow",
+                          "Resource": "arn:aws:logs:ap-south-1:926405661193:log-group:/aws/lambda/cdk-glue-db-table-infra-act_update_table*"
+                        },
+                        {
+                          "Action": [
+                            "s3:DeleteObject*",
+                            "s3:GetObject*",
+                            "s3:PutObject*",
+                            "s3:ReplicateTags",
+                            "s3:ListBucket",
+                            "s3:GetBucketLocation",
+                            "s3:AbortMultipartUpload",
+                            "s3:ListBucketMultipartUploads",
+                            "s3:ListMultipartUploadParts",
+                            "s3:GetBucket*"
+                          ],
+                          "Effect": "Allow",
+                          "Resource": [
+                            "arn:aws:s3:::glue-db-table-infra-dev-ap-south-1",
+                            "arn:aws:s3:::glue-db-table-infra-dev-ap-south-1/*"
+                          ]
+                        },
+                        {
+                          "Action": [
+                            "glue:BatchCreatePartition",
+                            "glue:BatchDeleteTable",
+                            "glue:BatchGetPartition",
+                            "glue:CreateDatabase",
+                            "glue:CreatePartition",
+                            "glue:CreateTable",
+                            "glue:DeleteTable",
+                            "glue:GetDatabase",
+                            "glue:GetDatabases",
+                            "glue:GetJob",
+                            "glue:GetPartition",
+                            "glue:GetPartitions",
+                            "glue:GetTable",
+                            "glue:GetTables",
+                            "glue:UpdatePartition",
+                            "glue:UpdateTable"
+                          ],
+                          "Effect": "Allow",
+                          "Resource": [
+                            "arn:aws:glue:ap-south-1:926405661193:catalog",
+                            "arn:aws:glue:ap-south-1:926405661193:database/glue_infra_db",
+                            "arn:aws:glue:ap-south-1:926405661193:table/glue_infra_db/*"
+                          ]
+                        },
+                        {
+                          "Action": [
+                            "kms:Decrept",
+                            "kms:Encrypt",
+                            "kms:ReEncrypt*",
+                            "kms:GenerateDataKey*",
+                            "kms:DescribeKey"
+                          ],
+                          "Effect": "Allow",
+                          "Resource": {
+                            "Fn::GetAtt": [
+                              "cdkgluedbtableinfrakeyId2662481F",
+                              "Arn"
+                            ]
+                          }
+                        },
+                        {
+                          "Action": "sns:Publish",
+                          "Effect": "Allow",
+                          "Resource": {
+                            "Ref": "cdkgluedbtableinfrasnstopicidA83204EF"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "description": "",
+                    "managedPolicyName": "cdk-glue-db-table-infra-act_update_table-policy",
+                    "path": "/"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnManagedPolicy",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.ManagedPolicy",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infraact_update_table-role-id": {
+            "id": "cdk-glue-db-table-infraact_update_table-role-id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infraact_update_table-role-id",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infraact_update_table-role-id/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "managedPolicyArns": [
+                      {
+                        "Ref": "cdkgluedbtableinfraactupdatetablepolicyid2C7FB429"
+                      }
+                    ],
+                    "roleName": "cdk-glue-db-table-infraact_update_table-role"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.Role",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infra-act_update_table_lambda-Id": {
+            "id": "cdk-glue-db-table-infra-act_update_table_lambda-Id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.138.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.138.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.138.1"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3S3Bucket5CA8A3CD"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3S3VersionKey8E295B18"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3S3VersionKey8E295B18"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "cdkgluedbtableinfraactupdatetableroleidF4116BDE",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "env": "dev",
+                        "project_id": "Glue DB Table Infra",
+                        "region": "ap-south-1",
+                        "data_file_s3_location": "glue-db-table-infra-dev-ap-south-1/actuals_s3_dataset/",
+                        "database_name": "glue_infra_db",
+                        "table_name": "actuals_table"
+                      }
+                    },
+                    "functionName": "cdk-glue-db-table-infra-act_update_table_lambda",
+                    "handler": "main.lambda_handler",
+                    "runtime": "python3.8",
+                    "timeout": 900
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.138.1"
+                }
+              },
+              "LogRetention": {
+                "id": "LogRetention",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/LogRetention",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/LogRetention/Resource",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-logs.LogRetention",
+                  "version": "1.138.1"
+                }
+              },
+              "LogGroup": {
+                "id": "LogGroup",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/LogGroup",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Resource",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.138.1"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "cdk-glue-db-table-infra/AssetParameters",
+            "children": {
+              "389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3": {
+                "id": "389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3",
+                "path": "cdk-glue-db-table-infra/AssetParameters/389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "cdk-glue-db-table-infra/AssetParameters/389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.138.1"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "cdk-glue-db-table-infra/AssetParameters/389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.138.1"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "cdk-glue-db-table-infra/AssetParameters/389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.138.1"
+                }
+              },
+              "c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5": {
+                "id": "c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5",
+                "path": "cdk-glue-db-table-infra/AssetParameters/c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "cdk-glue-db-table-infra/AssetParameters/c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.138.1"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "cdk-glue-db-table-infra/AssetParameters/c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.138.1"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "cdk-glue-db-table-infra/AssetParameters/c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.138.1"
+            }
+          },
+          "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a": {
+            "id": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a",
+            "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.138.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.138.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.138.1"
+                }
+              },
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.138.1"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "logs:PutRetentionPolicy",
+                                    "logs:DeleteRetentionPolicy"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+                            "roles": [
+                              {
+                                "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.138.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.138.1"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infra-actStateMachine-policy-id": {
+            "id": "cdk-glue-db-table-infra-actStateMachine-policy-id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-actStateMachine-policy-id",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-actStateMachine-policy-id/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::ManagedPolicy",
+                  "aws:cdk:cloudformation:props": {
+                    "policyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "lambda:InvokeFunction",
+                          "Effect": "Allow",
+                          "Resource": "arn:aws:lambda:dev:926405661193:function:cdk-glue-db-table-infra-*"
+                        },
+                        {
+                          "Action": "sns:Publish",
+                          "Effect": "Allow",
+                          "Resource": {
+                            "Ref": "cdkgluedbtableinfrasnstopicidA83204EF"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "description": "",
+                    "managedPolicyName": "cdk-glue-db-table-infra-actStateMachine-policy",
+                    "path": "/"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnManagedPolicy",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.ManagedPolicy",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infraactStateMachine-role-id": {
+            "id": "cdk-glue-db-table-infraactStateMachine-role-id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infraactStateMachine-role-id",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infraactStateMachine-role-id/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "states.ap-south-1.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "managedPolicyArns": [
+                      {
+                        "Ref": "cdkgluedbtableinfraactStateMachinepolicyid62871AF9"
+                      }
+                    ],
+                    "roleName": "cdk-glue-db-table-infraactStateMachine-role"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.CfnRole",
+                  "version": "1.138.1"
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infraactStateMachine-role-id/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infraactStateMachine-role-id/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "lambda:InvokeFunction",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "cdkgluedbtableinfraactupdatetablelambdaId3139F7D0",
+                                  "Arn"
+                                ]
+                              }
+                            },
+                            {
+                              "Action": "sns:Publish",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Ref": "cdkgluedbtableinfrasnstopicidA83204EF"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "cdkgluedbtableinfraactStateMachineroleidDefaultPolicy19499A29",
+                        "roles": [
+                          {
+                            "Ref": "cdkgluedbtableinfraactStateMachineroleid249DF58C"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                      "version": "1.138.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Policy",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-iam.Role",
+              "version": "1.138.1"
+            }
+          },
+          "ActualsRedAlert": {
+            "id": "ActualsRedAlert",
+            "path": "cdk-glue-db-table-infra/ActualsRedAlert",
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-stepfunctions.Task",
+              "version": "1.138.1"
+            }
+          },
+          "Actuals Update Table Lambda": {
+            "id": "Actuals Update Table Lambda",
+            "path": "cdk-glue-db-table-infra/Actuals Update Table Lambda",
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-stepfunctions.Task",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infra-actuals-FailTask-Id": {
+            "id": "cdk-glue-db-table-infra-actuals-FailTask-Id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-actuals-FailTask-Id",
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-stepfunctions.Fail",
+              "version": "1.138.1"
+            }
+          },
+          "ActualsStartState": {
+            "id": "ActualsStartState",
+            "path": "cdk-glue-db-table-infra/ActualsStartState",
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-stepfunctions.Pass",
+              "version": "1.138.1"
+            }
+          },
+          "Actuals Step Function Execution complete.": {
+            "id": "Actuals Step Function Execution complete.",
+            "path": "cdk-glue-db-table-infra/Actuals Step Function Execution complete.",
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-stepfunctions.Succeed",
+              "version": "1.138.1"
+            }
+          },
+          "cdk-glue-db-table-infra-stateMachine-Id": {
+            "id": "cdk-glue-db-table-infra-stateMachine-Id",
+            "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-stateMachine-Id",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-glue-db-table-infra/cdk-glue-db-table-infra-stateMachine-Id/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::StepFunctions::StateMachine",
+                  "aws:cdk:cloudformation:props": {
+                    "roleArn": {
+                      "Fn::GetAtt": [
+                        "cdkgluedbtableinfraactStateMachineroleid249DF58C",
+                        "Arn"
+                      ]
+                    },
+                    "definitionString": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "{\"StartAt\":\"ActualsStartState\",\"States\":{\"ActualsStartState\":{\"Type\":\"Pass\",\"ResultPath\":\"$.Execution\",\"Parameters\":{\"Execution.$\":\"$$.Execution.Id\"},\"Next\":\"Actuals Update Table Lambda\"},\"Actuals Update Table Lambda\":{\"Next\":\"Actuals Step Function Execution complete.\",\"Catch\":[{\"ErrorEquals\":[\"States.ALL\"],\"ResultPath\":\"$.error\",\"Next\":\"ActualsRedAlert\"}],\"Type\":\"Task\",\"Resource\":\"",
+                          {
+                            "Fn::GetAtt": [
+                              "cdkgluedbtableinfraactupdatetablelambdaId3139F7D0",
+                              "Arn"
+                            ]
+                          },
+                          "\",\"ResultPath\":\"$.updt_table_creation_output\"},\"Actuals Step Function Execution complete.\":{\"Type\":\"Succeed\"},\"ActualsRedAlert\":{\"Next\":\"cdk-glue-db-table-infra-actuals-FailTask-Id\",\"Parameters\":{\"TopicArn\":\"",
+                          {
+                            "Ref": "cdkgluedbtableinfrasnstopicidA83204EF"
+                          },
+                          "\",\"Message\":{\"isEvent\":true,\"message\":\"PROJECT: Glue DB Table Infra. COMPONENT ARN: arn:aws:states:ap-south-1:926405661193:stateMachine:cdk-glue-db-table-infra-actuals-stateMachine. REASON: Refer Step Function Execution Logs for details.\",\"details\":\"Refer Step Function Execution Logs for details.\",\"eventAction\":\"PageCritical\",\"itsmId\":\"12345\",\"sourceSystem\":\"None- Glue DB Table Infra\",\"primaryCI\":\"no-entry\"},\"Subject\":\"[Error-None]glueInfra Step Function\"},\"Type\":\"Task\",\"Resource\":\"arn:",
+                          {
+                            "Ref": "AWS::Partition"
+                          },
+                          ":states:::sns:publish\",\"ResultPath\":\"$.output\"},\"cdk-glue-db-table-infra-actuals-FailTask-Id\":{\"Type\":\"Fail\",\"Error\":\"$.error\",\"Cause\":\"An exception was thrown and not handled. Check email.\"}}}"
+                        ]
+                      ]
+                    },
+                    "stateMachineName": "cdk-glue-db-table-infra-actuals-stateMachine"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-stepfunctions.CfnStateMachine",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-stepfunctions.StateMachine",
+              "version": "1.138.1"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "cdk-glue-db-table-infra/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "cdk-glue-db-table-infra/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.138.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.138.1"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.138.1"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.138.1"
+    }
+  }
+}

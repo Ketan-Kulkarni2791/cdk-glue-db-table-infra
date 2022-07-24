@@ -1,0 +1,44 @@
+-- First check you have npm installed.
+
+> npm --version
+
+-- Then check if you have cdk installed.
+
+> cdk --version
+
+-- If not, install it.
+
+> npm install -g aws-cdk
+
+-- Check if you have node installed.
+
+> node -v
+
+-- Get your aws account number using following command.
+
+> aws sts get-caller-identity
+
+-- Then use that account number and deployment region into bootstrap command.
+
+> cdk bootstrap aws://<AccountID>/<region> 
+> cdk bootstrap aws://926405661193/ap-south-1
+
+-- Once the bootstrapping process is completed you are ready to make your first project.
+   Create an empty folder and into that folder, run following command.
+
+> cdk init app --language python
+
+-- Once you are done with the code activate ven and install requirements.txt file.
+
+> .venv\Scripts\activate
+> pip install -r requirements.txt
+
+-- The CDK is used to make a CloudFormation template which CloudFormation then deploys.
+   This will output the CFn template in yaml format on your terminal as well as save it formatted 
+   in json at cdk.out/.
+
+> cdk synth
+
+-- Then to deploy it to the cloud, use following command.
+
+> cdk deploy    

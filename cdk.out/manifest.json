@@ -1,0 +1,551 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "cdk-glue-db-table-infra": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://926405661193/ap-south-1",
+      "properties": {
+        "templateFile": "cdk-glue-db-table-infra.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/cdk-glue-db-table-infra": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3",
+              "id": "389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3",
+              "packaging": "zip",
+              "sourceHash": "389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3",
+              "s3BucketParameter": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3S3Bucket5CA8A3CD",
+              "s3KeyParameter": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3S3VersionKey8E295B18",
+              "artifactHashParameter": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3ArtifactHashD3BD16F0"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:182:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:101:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5",
+              "id": "c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5",
+              "packaging": "zip",
+              "sourceHash": "c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5",
+              "s3BucketParameter": "AssetParametersc13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5S3Bucket51CDED69",
+              "s3KeyParameter": "AssetParametersc13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5S3VersionKey50C3CFF0",
+              "artifactHashParameter": "AssetParametersc13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5ArtifactHashE9AE13B7"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:182:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "new LogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:89:23)",
+              "LogRetention.ensureSingletonLogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:75:16)",
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:37:31)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-keyId/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfrakeyId2662481F",
+            "trace": [
+              "new Key (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-kms\\lib\\key.js:273:26)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-keyId/Alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfrakeyIdAlias4A58B061",
+            "trace": [
+              "new Alias (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-kms\\lib\\alias.js:120:26)",
+              "Key.addAlias (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-kms\\lib\\key.js:32:23)",
+              "new Key (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-kms\\lib\\key.js:287:18)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-sns-topic-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfrasnstopicidA83204EF",
+            "trace": [
+              "new Topic (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic.js:47:26)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-sns-topic-id/ketankulkarni2791@gmail.com/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfrasnstopicidketankulkarni2791gmailcomF7547409",
+            "trace": [
+              "new Subscription (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-sns\\lib\\subscription.js:51:9)",
+              "Topic.addSubscription (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-sns\\lib\\topic-base.js:35:9)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8045:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8045:107",
+              "Kernel._ensureSync (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8611:28)",
+              "Kernel.invoke (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8045:34)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table-policy-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfraactupdatetablepolicyid2C7FB429",
+            "trace": [
+              "new ManagedPolicy (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\managed-policy.js:39:26)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infraact_update_table-role-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfraactupdatetableroleidF4116BDE",
+            "trace": [
+              "new Role (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:75:22)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfraactupdatetablelambdaId3139F7D0",
+            "trace": [
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:146:26)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-act_update_table_lambda-Id/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfraactupdatetablelambdaIdLogRetentionE8313C09",
+            "trace": [
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:41:26)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/AssetParameters/389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3S3Bucket5CA8A3CD",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:169:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:101:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/AssetParameters/389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3S3VersionKey8E295B18",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:169:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:101:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/AssetParameters/389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters389d13171492ee7af93dd0170afe05290b721360851cca854200ef5838a6fbe3ArtifactHashD3BD16F0",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:169:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:101:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/AssetParameters/c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5S3Bucket51CDED69",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:169:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "new LogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:89:23)",
+              "LogRetention.ensureSingletonLogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:75:16)",
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:37:31)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/AssetParameters/c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5S3VersionKey50C3CFF0",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:169:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "new LogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:89:23)",
+              "LogRetention.ensureSingletonLogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:75:16)",
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:37:31)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/AssetParameters/c13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc13434f8f1aa2ea30fa577b2feb208a41368b11787b752e10bfc71fe8eb919d5ArtifactHashE9AE13B7",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:169:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "Stack.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack.js:435:33)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:59",
+              "withoutDeprecationWarnings (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:209:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:91:20)",
+              "new Asset (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "new LogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:89:23)",
+              "LogRetention.ensureSingletonLogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:75:16)",
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:37:31)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+            "trace": [
+              "new Role (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:75:22)",
+              "new LogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:93:36)",
+              "LogRetention.ensureSingletonLogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:75:16)",
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:37:31)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+            "trace": [
+              "new Policy (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:58:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:214:34)",
+              "new LogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:98:14)",
+              "LogRetention.ensureSingletonLogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:75:16)",
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:37:31)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "trace": [
+              "new LogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:106:26)",
+              "LogRetention.ensureSingletonLogRetentionFunction (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:75:16)",
+              "new LogRetention (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-logs\\lib\\log-retention.js:37:31)",
+              "new Function (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:202:34)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-actStateMachine-policy-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfraactStateMachinepolicyid62871AF9",
+            "trace": [
+              "new ManagedPolicy (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\managed-policy.js:39:26)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infraactStateMachine-role-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfraactStateMachineroleid249DF58C",
+            "trace": [
+              "new Role (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:75:22)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infraactStateMachine-role-id/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfraactStateMachineroleidDefaultPolicy19499A29",
+            "trace": [
+              "new Policy (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:58:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:214:34)",
+              "StateMachine.addToRolePolicy (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:322:19)",
+              "new StateMachine (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:298:18)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/cdk-glue-db-table-infra-stateMachine-Id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cdkgluedbtableinfrastateMachineIdD8C15B2C",
+            "trace": [
+              "new StateMachine (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\aws-stepfunctions\\lib\\state-machine.js:288:26)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:58",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "Kernel._create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8230:34)",
+              "Kernel.create (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:7969:29)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ],
+        "/cdk-glue-db-table-infra/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:22:30)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:139:9",
+              "visit (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:200:9)",
+              "visit (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:197:9)",
+              "injectMetadataResources (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:5)",
+              "Object.synthesize (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\DELL\\AppData\\Local\\Temp\\jsii-kernel-T52jfY\\node_modules\\@aws-cdk\\core\\lib\\stage.js:103:41)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8045:134",
+              "Kernel._wrapSandboxCode (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8630:24)",
+              "C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8045:107",
+              "Kernel._ensureSync (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8611:28)",
+              "Kernel.invoke (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:8045:34)",
+              "KernelHost.processRequest (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9614:36)",
+              "KernelHost.run (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9577:22)",
+              "Immediate._onImmediate (C:\\Users\\DELL\\AppData\\Local\\Temp\\tmpqha4vork\\lib\\program.js:9578:46)",
+              "processImmediate (node:internal/timers:466:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "cdk-glue-db-table-infra"
+    }
+  }
+}
